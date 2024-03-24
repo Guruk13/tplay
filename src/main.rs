@@ -49,6 +49,10 @@ struct Args {
     /// Experimental flag to add newlines
     #[arg(short, long, default_value = "false")]
     new_lines: bool,
+    /// Quit when last frame has been drawn 
+    #[arg(short, long, default_value = "false")]
+    quit: bool,
+    
 }
 
 const DEFAULT_TERMINAL_SIZE: (u32, u32) = (80, 24);

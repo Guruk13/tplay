@@ -206,7 +206,7 @@ fn capture_video_frame(video: &mut VideoCapture) -> Option<DynamicImage> {
     if video.read(&mut frame).unwrap_or(false) && !frame.empty() {
         mat_to_dynamic_image(&frame)
     } else {
-        None
+        std::process::exit(0);
     }
 }
 
